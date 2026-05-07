@@ -28,7 +28,18 @@ std::string kYourName = "STUDENT TODO"; // Don't forget to change this!
  * to also change the corresponding functions in `utils.h`.
  */
 std::set<std::string> get_applicants(std::string filename) {
-  // STUDENT TODO: Implement this function.
+  std::ifstream ifs(filename);
+  std::set<std::string> applicants;
+  if (ifs.is_open()) {
+    std::clog << "Getting applicants from file..." << '\n';
+    std::string line;
+    while (std::getline(ifs, line)) {
+      applicants.insert(line);
+    }
+  } else {
+    std::cerr << "Failed to open file" << std::endl;
+  }
+  return applicants;
 }
 
 /**
