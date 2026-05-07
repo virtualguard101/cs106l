@@ -90,7 +90,7 @@ g++ -std=c++20 main.cpp -o main
 > 从集合 `students` （上一部分生成）中，取出所有与参数 `name` 首字母相同的名字，并将指向它们的指针放入新的 `std::queue` 中。
 > 
 > *   如果你在遍历集合时遇到困难，回顾一下周四关于迭代器和指针的讲座可能会有所帮助。
-> *   完成这部分需要熟悉 `std::queue` 的操作。请查看 cppreference 的文档（链接在此）。
+> *   完成这部分需要熟悉 `std::queue` 的操作。请查看 cppreference 的文档（[链接在此](https://zh.cppreference.com/w/cpp/container/queue)）。
 > *   提示：定义一个辅助函数来计算某个学生名字的首字母可能会很有帮助。然后你可以用这个辅助函数将 `name` 的首字母与 `students` 中每个名字的首字母进行比较。
 
 请从这里开始实现函数 `get_match` ，以找到你的“唯一真命匹配”：
