@@ -45,7 +45,8 @@ std::set<std::string> FindDoubleAgents(std::map<std::string, std::set<std::strin
 }
 
 int main() {
-    std::vector<int> weekly_forecast = InitializeVector(7);
+    // std::vector<int> weekly_forecast = InitializeVector(7);
+    std::vector<int> weekly_forecast{10, 20, 30, 40, 50, 60, 70};
     std::cout << "----- Weather Report -----" << '\n';
     PrintVector(weekly_forecast);
     std::cout << "----- Peak Heat -----" << '\n';
@@ -55,8 +56,8 @@ int main() {
     std::cout << "----- Double Agents -----" << '\n';
     std::map<std::string, std::set<std::string>> departments = {
         {"Department 1", {"Agent 1", "Agent 2", "Agent 3"}},
-        {"Department 2", {"Agent 4", "Agent 5", "Agent 6"}},
-        {"Department 3", {"Agent 7", "Agent 8", "Agent 9"}},
+        {"Department 2", {"Agent 4", "Agent 5", "Agent 1"}},
+        {"Department 3", {"Agent 7", "Agent 5", "Agent 9"}},
     };
     std::set<std::string> double_agents = FindDoubleAgents(departments);
     for (const auto& agent : double_agents) {
