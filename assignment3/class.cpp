@@ -1,4 +1,5 @@
 #include "class.h"
+
 #include <utility>
 
 Album::Album(std::string title, std::string artist, int year, int track_count,
@@ -26,9 +27,7 @@ std::string Album::GetArtist() const { return artist; }
 
 int Album::GetYear() const { return year; }
 
-std::pair<int, std::string> Album::GetTracks() const {
-  return tracks;
-}
+std::pair<int, std::string> Album::GetTracks() const { return tracks; }
 
 double Album::GetPrice() const { return price; }
 

@@ -3,8 +3,9 @@
  * Created by Fabio Ibanez with modifications by Jacob Roberts-Baca.
  */
 
-#include "class.h"
 #include <iostream>
+
+#include "class.h"
 
 void sandbox() {
   Album album("Lunar Calendar - EP", "r-906", 2023, 6, "00:22:00", 7.74);
