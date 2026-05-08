@@ -14,7 +14,8 @@
 #include <string>
 
 int run_autograder() {
-  auto run_program = [](std::string program, std::initializer_list<std::string> args,
+  auto run_program = [](std::string program,
+                        std::initializer_list<std::string> args,
                         bool silent = false) {
     std::stringstream ss;
 
@@ -36,7 +37,8 @@ int run_autograder() {
   };
 
   std::string python;
-  for (const auto& option : {"python", "python3", "/usr/bin/python3", "/usr/bin/python"}) {
+  for (const auto& option :
+       {"python", "python3", "/usr/bin/python3", "/usr/bin/python"}) {
     if (run_program(option, {"--version"}, true) == 0) {
       python = option;
       break;
@@ -44,9 +46,10 @@ int run_autograder() {
   }
 
   if (python.empty()) {
-    std::cerr << "Python was not found on your system. Please install Python and "
-                 "try again."
-              << "\n";
+    std::cerr
+        << "Python was not found on your system. Please install Python and "
+           "try again."
+        << "\n";
     std::exit(1);
   }
 
