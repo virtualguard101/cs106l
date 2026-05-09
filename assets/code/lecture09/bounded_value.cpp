@@ -2,32 +2,52 @@
  * Author: Preston Seay
  *
  * This file implements the BoundedValue template class.
- * 
+ *
  * Somtimes, this implementation of the template would
  * be called a .tpp file, since it's somewhat special
  * as it's included at the bottom of the .h.
  */
+#include <vector>
 
-// TODO: Constructor
 template <typename T>
-BoundedValue<T>::BoundedValue(T value, T minValue, T maxValue);
+BoundedValue<T>::BoundedValue(T value, T minValue, T maxValue) {
+  this->minValue = minValue;
+  this->maxValue = maxValue;
+  if (value < minValue) {
+    this->value = minValue;
+  } else if (value > maxValue) {
+    this->value = maxValue;
+  } else {
+    this->value = value;
+  }
+}
 
-// TODO: Return stored value
 template <typename T>
-T BoundedValue<T>::get() const;
+T BoundedValue<T>::get() const {
+  return this->value;
+}
 
-// TODO: Set value and enforce bounds
 template <typename T>
-void BoundedValue<T>::set(T newValue);
+void BoundedValue<T>::set(T newValue) {
+  value = newValue;
+  if (value < minValue) {
+    this->value = minValue;
+  } else if (value < maxValue) {
+    this->value = maxValue;
+  }
+}
 
-// TODO: Return minimum bound
 template <typename T>
-T BoundedValue<T>::getMin() const;
+T BoundedValue<T>::getMin() const {
+  return minValue;
+}
 
-// TODO: Return maximum bound
 template <typename T>
-T BoundedValue<T>::getMax() const;
+T BoundedValue<T>::getMax() const {
+  return maxValue;
+}
 
-// OPTIONAL TODO:
 template <typename T>
-void BoundedValue<T>::adjust(T delta);
+void BoundedValue<T>::adjust(T delta) {
+  set(value + delta);
+}

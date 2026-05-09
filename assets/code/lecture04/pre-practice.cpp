@@ -1,7 +1,7 @@
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <string>
- 
+
 // ============================================================
 //  EXERCISE 1 — std::cout
 //
@@ -16,14 +16,13 @@
 //    3.14
 // ============================================================
 void exercise1_cout() {
-    std::cout << "=== Exercise 1: cout ===\n";
+  std::cout << "=== Exercise 1: cout ===\n";
 
-    // YOUR CODE HERE
+  // YOUR CODE HERE
 
-    std::cout << "\n";
+  std::cout << "\n";
 }
- 
- 
+
 // ============================================================
 //  EXERCISE 2 — std::cin
 //
@@ -39,17 +38,16 @@ void exercise1_cout() {
 //  Note: For this exercise, assume the name is a single word
 // ============================================================
 void exercise2_cin() {
-    std::cout << "=== Exercise 2: cin ===\n";
- 
-    std::string name;
-    int number;
- 
-    // YOUR CODE HERE
-  
-    std::cout << "\n";
+  std::cout << "=== Exercise 2: cin ===\n";
+
+  std::string name;
+  int number;
+
+  // YOUR CODE HERE
+
+  std::cout << "\n";
 }
- 
- 
+
 // ============================================================
 //  EXERCISE 3 — std::ofstream
 //
@@ -69,15 +67,14 @@ void exercise2_cin() {
 //    - If it fails, print "Error: could not open file" to std::cerr
 // ============================================================
 void exercise3_ofstream() {
-    std::cout << "=== Exercise 3: ofstream ===\n";
- 
-    // YOUR CODE HERE
-    std::ofstream ofile("numbers.txt");
- 
-    std::cout << "\n";
+  std::cout << "=== Exercise 3: ofstream ===\n";
+
+  // YOUR CODE HERE
+  std::ofstream ofile("numbers.txt");
+
+  std::cout << "\n";
 }
- 
- 
+
 // ============================================================
 //  EXERCISE 4 — std::ifstream
 //
@@ -92,14 +89,13 @@ void exercise3_ofstream() {
 //    - Use a while loop to read until end of file
 // ============================================================
 void exercise4_ifstream() {
-    std::cout << "=== Exercise 4: ifstream ===\n";
+  std::cout << "=== Exercise 4: ifstream ===\n";
 
-    // YOUR CODE HERE
+  // YOUR CODE HERE
 
-    std::cout << "\n";
+  std::cout << "\n";
 }
- 
- 
+
 // ============================================================
 //  EXERCISE 5 — Stretch goal
 //
@@ -114,21 +110,19 @@ void exercise4_ifstream() {
 //  Hint: For step 4, look up std::ios::app
 // ============================================================
 void exercise5_combined() {
-    std::cout << "=== Exercise 5: Combined ===\n";
- 
-    // YOUR CODE HERE
-    
- 
-    std::cout << "\n";
+  std::cout << "=== Exercise 5: Combined ===\n";
+
+  // YOUR CODE HERE
+
+  std::cout << "\n";
 }
- 
 
 int main() {
-    exercise1_cout();
-    exercise2_cin();
-    exercise3_ofstream();
-    exercise4_ifstream();
-    exercise5_combined();
- 
-    return 0;
+  exercise1_cout();
+  exercise2_cin();
+  exercise3_ofstream();
+  exercise4_ifstream();
+  exercise5_combined();
+
+  return 0;
 }

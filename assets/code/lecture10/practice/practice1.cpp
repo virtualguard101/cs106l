@@ -19,16 +19,16 @@
 
 template <typename T>
 T min(T a, T b) {
-    return a < b ? a : b;
+  return a < b ? a : b;
 }
 
 int main() {
-    // BUG: this compiles but may not do what you expect!
-    auto result = min("apple", "banana");
-    std::cout << "min(\"apple\", \"banana\") = " << result << std::endl;
+  // BUG: this compiles but may not do what you expect!
+  auto result = min("apple", "banana");
+  std::cout << "min(\"apple\", \"banana\") = " << result << std::endl;
 
-    // TODO: fix the call above so it correctly compares strings alphabetically.
-    // Your fix should not change the template definition itself.
+  // TODO: fix the call above so it correctly compares strings alphabetically.
+  // Your fix should not change the template definition itself.
 
-    return 0;
+  return 0;
 }
